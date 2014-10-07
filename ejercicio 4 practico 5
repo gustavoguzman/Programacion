@@ -1,0 +1,46 @@
+// practico 5 ejercicio 4.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main()
+{int h1, m1, s1, h2, m2, s2, h3,h4,a, a1, a2, a3, ha, ma, hb, mb;
+ 
+ cout<<"ingrese primer horario (horas, minutos, segundos): ";
+ cin>>h1;
+ cin>>m1;
+ cin>>s1;
+ cout<<"ingrese segundo horario(horas, minutos, segundos): ";
+ cin>>h2;
+ cin>>m2;
+ cin>>s2;
+ ha=h1*3600;
+ ma=m1*60;
+ hb=h2*3600;
+ mb=h2*60;
+ while(ha>hb)
+  {cout<<"error, vuelva a ingresar datos";
+   cout<<"ingrese segundo horario(horas, minutos, segundos): ";
+   cin>>h2, m2, s2;
+  }
+ 
+ h4=hb+mb+s2;
+ h3=ha+ma+s1;
+ a= h4-h3;
+ a1=a/3600;
+ a2=(a-(a1*3600))/60;
+ a3=a-(a1*3600+a2*60);
+
+ cout<<"la diferencia es: ";
+ cout<<a1;
+ cout<<"\t";
+ cout<<a2;
+ cout<<"\t";
+ cout<<a3;
+ getch();
+	
+}
