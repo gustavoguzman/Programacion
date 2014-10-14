@@ -1,0 +1,28 @@
+// bases.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+void main()
+{int q, n, numero, b, res, e, suma;
+ cout<<"ingrese el numero en base decimal: ";
+ cin>>n;
+ cout<<"ingrese la nueva base: ";
+ cin>>b;
+ suma=0;
+ e=0;
+ while(n>0)
+ {res=n%b;
+  n=n/b;
+  suma=suma + res*powf(10,e);
+  e=e++;
+ }
+ cout<<"\nla suma es: "<<suma;
+ getch();
+	
+}
