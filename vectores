@@ -1,0 +1,35 @@
+// Vectores.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define tam 100
+
+using namespace std;
+
+void leer_vector(int vec[], int n);
+void mostrar_vector(int vec[], int n);
+
+void main()
+{int n, v[tam];
+do
+ {
+ cout<<"ingrese cuantos elementos desea ingresar: ";
+ cin>>n;
+ }while((n>tam)||(n<=0));
+ leer_vector(v, n);
+ mostrar_vector(v, n);
+ getch();
+}
+
+void leer_vector(int vec[], int n)
+{for(int i=0; i<n; i++)
+  cin>> vec[i];
+}
+
+void mostrar_vector(int vec[], int n)
+{for(int i=0; i<n; i++)
+  cout<< "\t"<< vec[i];
+}
+	
